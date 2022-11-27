@@ -1,11 +1,13 @@
-﻿using Lab1;
+﻿using LabsInterface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace AllLabs.Lab5
+namespace LabsLibrary
 {
-    class Lab5 : ILabs
+    class Lab6 : ILabs
     {
         /// <summary>
         /// Метод демонстрации всех заданий лабораторной работы
@@ -14,23 +16,21 @@ namespace AllLabs.Lab5
         {
             // Console.WriteLine("Демо");
             // ход лабы
+            int Factorial(int n)
+            {
+                if (n == 1) return 1;
 
-            Matrix exemp1 = new Matrix(5, 5);
+                return n * Factorial(n - 1);
+            }
 
-            exemp1.Random();
-            exemp1.Print();
+            int factorial4 = Factorial(4);  // 24
+            int factorial5 = Factorial(5);  // 120
+            int factorial6 = Factorial(6);  // 720
 
-            Console.WriteLine("Сумма:" + exemp1.Sum());
-
-            Console.WriteLine();
-            exemp1.GlavDiag();
-
-            Console.WriteLine();
-            exemp1.PassivDiag();
-
-            Console.ReadKey();
+            Console.WriteLine($"Факториал числа 4 = {factorial4}");
+            Console.WriteLine($"Факториал числа 5 = {factorial5}");
+            Console.WriteLine($"Факториал числа 6 = {factorial6}");
         }
-
         /// <summary>
         /// Метод возвращает описание заданий лабораторной работы
         /// </summary>
@@ -38,7 +38,7 @@ namespace AllLabs.Lab5
         /// <returns>Описание лабы</returns>
         public string Description()
         {
-            return "Задание 5";
+            return "Задание 6";
         }
         /// <summary>
         /// Метод возвращает номер лабораторной работы
@@ -46,7 +46,7 @@ namespace AllLabs.Lab5
         /// <returns>Номер лабы</returns>
         public int Id()
         {
-            return 5;
+            return 6;
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace AllLabs.Lab5
         /// <returns></returns>
         public string Name()
         {
-            return "Лабораторная №5. OOП";
+            return "Лабораторная №6. Рекурсивная функция";
         }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace AllLabs.Lab5
+namespace LabsLibrary.Lab5
 {
     class Matrix
     {

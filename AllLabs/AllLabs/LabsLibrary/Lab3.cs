@@ -1,8 +1,11 @@
-﻿using System;
+﻿using LabsInterface;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Lab1
+namespace LabsLibrary
 {
     public class Lab3 : ILabs
     {
@@ -60,7 +63,7 @@ namespace Lab1
                 {
                     summa += chi;
                 }
-            } 
+            }
             Console.WriteLine("summa= " + summa);
 
         }
@@ -93,4 +96,3 @@ namespace Lab1
         }
     }
 }
-
